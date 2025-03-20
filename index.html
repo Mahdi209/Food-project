@@ -5,109 +5,286 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fast Food</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
   <body>
     <nav class="navbar">
-      <img src="./pics/logo.webp" alt="this imag is not loading" class="logo" />
+      <img src="./pics/logo.webp" alt="Fast Food Logo" class="logo" />
 
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">contact</a></li>
-        <li><a href="#">about</a></li>
+        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#menu"><i class="fas fa-utensils"></i> Menu</a></li>
+        <li><a href="#"><i class="fas fa-phone"></i> Contact</a></li>
       </ul>
-    </nav>
-    <div class="big-container">
-      <div class="container">
-        <div class="Two-container">
-          <h1 class="title">Fast Food is hero</h1>
-          <button>Order now!</button>
-        </div>
-
-        <div class="i-card">
-          <img
-            class="img-card"
-            src="./pics/pngtree-food-fast-food-cartoon-png-image_13322666.png"
-            alt=""
-          />
-        </div>
+      
+      <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
       </div>
+    </nav>
+    
+    <div class="big-container">
+      <section class="hero-section">
+        <div class="container">
+          <div class="Two-container">
+            <h1 class="title">Fast Food is hero</h1>
+            <p class="subtitle">Delicious food delivered to your doorstep!</p>
+            <button class="cta-button">Order now! <i class="fas fa-arrow-right"></i></button>
+          </div>
 
-      <div class="menu-container">
-        <div class="title-main-section">Quick Bits Eat Fast,Laugh Faster!</div>
+          <div class="i-card">
+            <img
+              class="img-card"
+              src="./pics/pngtree-food-fast-food-cartoon-png-image_13322666.png"
+              alt="Fast food cartoon image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="menu" class="menu-container">
+        <div class="title-main-section">Quick Bits Eat Fast, Laugh Faster!</div>
+        <p class="menu-description">Explore our delicious menu offerings</p>
+        
+        <div class="category-filter">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="burgers">Burgers</button>
+          <button class="filter-btn" data-filter="sides">Sides</button>
+          <button class="filter-btn" data-filter="healthy">Healthy</button>
+        </div>
+        
         <div class="img-container">
-          <div class="main-img-card">
+          <div class="main-img-card" data-category="sides">
+            <div class="card-badge">Popular</div>
             <img
               class="main-img"
               src="https://png.pngtree.com/png-clipart/20230530/ourmid/pngtree-delicious-onion-rings-png-image_7114803.png"
-              alt=""
+              alt="Onion rings"
             />
             <div class="text-container">
               <p class="text">Ring Orion</p>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
             </div>
           </div>
-          <div class="main-img-card">
+          
+          <div class="main-img-card" data-category="burgers">
             <img
               class="main-img"
               src="https://www.kindpng.com/picc/m/113-1135703_hamburger-fast-food-veggie-burger-cartoon-burger-png.png"
-              alt=""
+              alt="Burger"
               id="img-two"
             />
             <div class="text-container">
-              <p class="text">burgers</p>
+              <p class="text">Burgers</p>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
             </div>
           </div>
-          <div class="main-img-card">
+          
+          <div class="main-img-card" data-category="sides">
+            <div class="card-badge">New</div>
             <img
               class="main-img"
               src="https://static.vecteezy.com/system/resources/previews/025/250/414/original/yummy-fried-chicken-cartoon-illustrations-and-clipart-of-tasty-fast-food-meal-generative-ai-png.png"
-              alt=""
+              alt="Fried chicken"
             />
             <div class="text-container">
               <p class="text">Fried Chicken</p>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
             </div>
           </div>
-          <div class="main-img-card">
+          
+          <div class="main-img-card" data-category="sides">
             <img
               class="main-img"
               src="https://png.pngtree.com/png-clipart/20220117/original/pngtree-cartoon-hand-painted-gourmet-french-fries-png-material-png-image_7126108.png"
-              alt=""
+              alt="French fries"
             />
             <div class="text-container">
               <p class="text">French Fries</p>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+              </div>
             </div>
           </div>
-          <div id="f-img" class="main-img-card">
+          
+          <div id="f-img" class="main-img-card" data-category="healthy">
+            <div class="card-badge">Healthy</div>
             <img
               class="main-img"
               src="https://static.vecteezy.com/system/resources/previews/018/974/363/original/hand-drawn-healthy-food-set-illustration-in-doodle-style-png.png"
-              alt=""
+              alt="Healthy food"
             />
             <div class="text-container">
               <p class="text">Healthy Swalef</p>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
             </div>
           </div>
-          <div class="main-img-card">
+          
+          <div class="main-img-card" data-category="burgers">
             <img
               class="main-img"
               src="https://img.freepik.com/premium-vector/hand-draw-pizza-with-various-ingredients-cartoon-style-whole-chopped-pizza-icon-vector-illust_380711-479.jpg"
-              alt=""
+              alt="Pizza"
             />
             <div class="text-container">
               <p class="text">Pizza</p>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
             </div>
           </div>
-          <div class="main-img-card">
+          
+          <div class="main-img-card" data-category="sides">
             <img
               class="main-img"
               src="https://png.pngtree.com/png-clipart/20230530/ourmid/pngtree-delicious-onion-rings-png-image_7114803.png"
-              alt=""
+              alt="Onion rings"
             />
             <div class="text-container">
-              <p class="text">burger</p>
+              <p class="text">Ring Onion</p>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      
+      <section class="newsletter-section">
+        <div class="newsletter-container">
+          <h2>Subscribe to Our Newsletter</h2>
+          <p>Get exclusive offers and updates on new menu items!</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit">Subscribe <i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </section>
+      
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="./pics/logo.webp" alt="Fast Food Logo">
+            <p>Delicious food, delivered fast.</p>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Food Street, Foodville</p>
+            <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+            <p><i class="fas fa-envelope"></i> info@fastfood.com</p>
+          </div>
+          <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 Fast Food. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
+    
+    <script>
+      // Mobile menu toggle
+      document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+        document.querySelector('ul').classList.toggle('show');
+      });
+      
+      // Category filter functionality
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const menuItems = document.querySelectorAll('.main-img-card');
+      
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          // Remove active class from all buttons
+          filterBtns.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          this.classList.add('active');
+          
+          const filter = this.getAttribute('data-filter');
+          
+          menuItems.forEach(item => {
+            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+              item.style.display = 'block';
+              setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'scale(1)';
+              }, 50);
+            } else {
+              item.style.opacity = '0';
+              item.style.transform = 'scale(0.8)';
+              setTimeout(() => {
+                item.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+      
+      // Animate elements when they come into view
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      document.querySelectorAll('.main-img-card, .title-main-section, .menu-description, .newsletter-container').forEach(el => {
+        observer.observe(el);
+      });
+    </script>
   </body>
 </html>
